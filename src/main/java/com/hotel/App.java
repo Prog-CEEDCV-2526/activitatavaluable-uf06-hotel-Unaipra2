@@ -196,7 +196,6 @@ public class App {
             default:
                 System.out.println("Has elegido un tipo invalido!!");
                 tipo = "";
-                seleccionarTipusHabitacio();
                 break;
         }        
 
@@ -210,7 +209,20 @@ public class App {
      * habitacions disponibles. En cas contrari, retorna null.
      */
     public static String seleccionarTipusHabitacioDisponible() {
-        System.out.println("\nTipus d'habitació disponibles:");
+      /*  System.out.println("\nTipus d'habitació disponibles:");
+        System.out.println("1. Estandar: "+disponibilitatHabitacions.get(TIPUS_ESTANDARD));
+        System.out.println("2. Suite: "+disponibilitatHabitacions.get(TIPUS_SUITE));
+        System.out.println("3. Deluxe: "+disponibilitatHabitacions.get(TIPUS_DELUXE));
+        switch (llegirEnter("Elige un tipo:")) {
+            case 1:
+                if (disponibilitatHabitacions.values() )
+                break;
+        
+            default:
+                break;
+        }*/
+
+        
         //TODO:
         return null;
     }
@@ -230,6 +242,7 @@ public class App {
             switch (llegirEnter("¿Cuantos servicios quieres? (De 0 a 4)\n")) {
                 case 0:
                     System.out.println("No quieres servicios");
+                    break;
                 case 1:
                     while (cont < 1) {
                         switch (llegirEnter("¿Que servicio quieres?\n1. Desayuno \n2. Gimnasio\n3. Spa\n4. Piscina\n")) {
@@ -459,6 +472,8 @@ public class App {
      */
     public static void alliberarHabitacio() {
         System.out.println("\n===== ALLIBERAR HABITACIÓ =====");
+
+
          // TODO: Demanar codi, tornar habitació i eliminar reserva
     }
 
