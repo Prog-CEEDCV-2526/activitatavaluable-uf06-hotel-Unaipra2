@@ -367,7 +367,7 @@ public class App {
                     }
                     System.out.println("Has elegido los servicios: "+ serviciosAñadidos);
                     break;
-                case 4:
+                /*case 4:
                     while (cont < 4) {
                         switch (llegirEnter("¿Que servicio quieres?\n1. Desayuno \n2. Gimnasio\n3. Spa\n4. Piscina\n")) {
                             case 1:
@@ -416,7 +416,7 @@ public class App {
                 default:
                     System.out.println("Has elegido una opcion invalida");
                     seleccionarServeis();
-                    break;
+                    break;*/
             } 
         return serviciosAñadidos;
     }
