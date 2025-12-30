@@ -208,21 +208,7 @@ public class App {
      * demana a l'usuari un tipus i només el retorna si encara hi ha
      * habitacions disponibles. En cas contrari, retorna null.
      */
-    public static String seleccionarTipusHabitacioDisponible() {
-      /*  System.out.println("\nTipus d'habitació disponibles:");
-        System.out.println("1. Estandar: "+disponibilitatHabitacions.get(TIPUS_ESTANDARD));
-        System.out.println("2. Suite: "+disponibilitatHabitacions.get(TIPUS_SUITE));
-        System.out.println("3. Deluxe: "+disponibilitatHabitacions.get(TIPUS_DELUXE));
-        switch (llegirEnter("Elige un tipo:")) {
-            case 1:
-                if (disponibilitatHabitacions.values() )
-                break;
-        
-            default:
-                break;
-        }*/
-
-        
+    public static String seleccionarTipusHabitacioDisponible() {        
         //TODO:
         return null;
     }
@@ -429,6 +415,7 @@ public class App {
                     break;
                 default:
                     System.out.println("Has elegido una opcion invalida");
+                    seleccionarServeis();
                     break;
             } 
         return serviciosAñadidos;
