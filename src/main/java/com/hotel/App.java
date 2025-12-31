@@ -164,7 +164,7 @@ public class App {
         //guardado de la reserva
         reserves.put(codiReser, reservaArray);
         System.out.println("El coste total de tu habitación es de "+ precioTotal);
-        System.out.println("tu codigo de reserva es "+ codiReser); 
+        System.out.println("tu Codi de reserva es "+ codiReser); 
 
         //TODO:
         
@@ -238,7 +238,12 @@ public class App {
                 switch (seleccion) {
                 case "s":
                     cont = llegirEnter("Selecciona un servicio:");
-                    if (cont > servicios.size()) {
+                    if (cont == 0){
+                        System.out.println("No quieres mas servicios");
+                        seleccion = "n";
+                        break;
+                    }else{                    
+                        if (cont > servicios.size() || cont < 0) {
                         System.out.println("Eso no es un servicio");
                     }else{
                         cont--;
@@ -254,7 +259,7 @@ public class App {
                         System.out.println("Quieres otro servicio? (s/n)");
                         seleccion = sc.next();
                     }
-                    }                    
+                    }}                    
                     break;
                     case "n":
                         System.out.println("No quieres mas servicios");
@@ -263,7 +268,8 @@ public class App {
                 default:
                     System.out.println("Eso no es una opcion");
                     break;
-            }
+                }
+
             }
             
         return serviciosAñadidos;
