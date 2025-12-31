@@ -129,8 +129,7 @@ public class App {
             case 6:
                 break;
             default:
-                System.out.println("Has elegido una opción invalida");
-                main(null);
+                System.out.println("Opció no vàlida");
                 break;
         }
 
