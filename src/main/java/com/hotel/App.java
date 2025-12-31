@@ -163,7 +163,8 @@ public class App {
 
         //guardado de la reserva
         reserves.put(codiReser, reservaArray);
-        System.out.println("El coste total de tu habitación es de "+ precioTotal + "\ntu codigo de reserva es "+ codiReser);
+        System.out.println("El coste total de tu habitación es de "+ precioTotal);
+        System.out.println("tu codigo de reserva es "+ codiReser); 
 
         //TODO:
         
