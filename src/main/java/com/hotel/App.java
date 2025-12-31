@@ -312,8 +312,15 @@ public class App {
      */
     public static void alliberarHabitacio() {
         System.out.println("\n===== ALLIBERAR HABITACIÓ =====");
-
-
+            int codi = llegirEnter("Introduce el codigo de reserva:");
+        if(reserves.containsKey(codi)){
+            System.out.println("Reserva encontrada!!");
+            reserves.remove(codi);
+            System.out.println("Reserva liberada");
+        } else {
+            System.out.println("La reserva no existe");
+        }
+        
          // TODO: Demanar codi, tornar habitació i eliminar reserva
     }
 
