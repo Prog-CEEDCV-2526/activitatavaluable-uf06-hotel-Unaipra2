@@ -225,199 +225,46 @@ public class App {
         servicios.add(SERVEI_PISCINA);
         ArrayList<String> serviciosAñadidos = new ArrayList<>();
             int cont = 0;
-            switch (llegirEnter("¿Cuantos servicios quieres? (De 0 a 4)\n")) {
-                case 0:
-                    System.out.println("No quieres servicios");
-                    break;
-                case 1:
-                    while (cont < 1) {
-                        switch (llegirEnter("¿Que servicio quieres?\n1. Desayuno \n2. Gimnasio\n3. Spa\n4. Piscina\n")) {
-                            case 1:
-                                if (serviciosAñadidos.contains(servicios.get(0))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(0));
-                                    serviciosAñadidos.add(servicios.get(0));
-                                    cont++;
-                                }
-                            break;
-                            case 2:
-                                if (serviciosAñadidos.contains(servicios.get(1))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(1));
-                                    serviciosAñadidos.add(servicios.get(1));
-                                    cont++;
-                                }
-                            break;
-                            case 3:
-                                if (serviciosAñadidos.contains(servicios.get(2))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(2));
-                                    serviciosAñadidos.add(servicios.get(2));
-                                    cont++;
-                                }
-                            break;
-                            case 4:
-                                if (serviciosAñadidos.contains(servicios.get(3))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(3));
-                                    serviciosAñadidos.add(servicios.get(3));
-                                    cont++;
-                                }
-                            break;
-                            default:
-                                System.out.println("Eso no es un servicio!!");
-                            break;
-                        }
+            System.out.println("(\"Servicios adicionales (0-4):\n");
+            System.out.println("0. Finalizar");
+            System.out.println("1. Desayuno");
+            System.out.println("2. Gimnasio");
+            System.out.println("3. Spa");
+            System.out.println("4. Piscina");
+            System.out.println("Quieres un servicio?(s/n)");
+            String seleccion = sc.next();
+            while (seleccion != "n") {
+                switch (seleccion) {
+                case "s":
+                    cont = llegirEnter("Selecciona un servicio:");
+                    if (cont > servicios.size()) {
+                        System.out.println("Eso no es un servicio");
+                    }else{
+                        cont--;
+                        String servicio = servicios.get(cont);
+                    if (serviciosAñadidos.contains(servicio)) {
+                        System.out.println("Ese servicio ya esta añadido!!");
+                        System.out.println("Quieres otro servicio? (s/n)");
+                        seleccion = sc.next();
+                    }else  {
+                        serviciosAñadidos.add(servicio);
+                        int serv2 = serviciosAñadidos.size()-1;
+                        System.out.println("Has elegido el servicio: "+ serviciosAñadidos.get(serv2));
+                        System.out.println("Quieres otro servicio? (s/n)");
+                        seleccion = sc.next();
                     }
-                    System.out.println("Has elegido los servicios: "+ serviciosAñadidos);
+                    }                    
                     break;
-                case 2:
-                    while (cont < 2) {
-                        switch (llegirEnter("¿Que servicio quieres?\n1. Desayuno \n2. Gimnasio\n3. Spa\n4. Piscina\n")) {
-                            case 1:
-                                if (serviciosAñadidos.contains(servicios.get(0))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(0));
-                                    serviciosAñadidos.add(servicios.get(0));
-                                    cont++;
-                                }
-                            break;
-                            case 2:
-                                if (serviciosAñadidos.contains(servicios.get(1))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(1));
-                                    serviciosAñadidos.add(servicios.get(1));
-                                    cont++;
-                                }
-                            break;
-                            case 3:
-                                if (serviciosAñadidos.contains(servicios.get(2))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(2));
-                                    serviciosAñadidos.add(servicios.get(2));
-                                    cont++;
-                                }
-                            break;
-                            case 4:
-                                if (serviciosAñadidos.contains(servicios.get(3))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(3));
-                                    serviciosAñadidos.add(servicios.get(3));
-                                    cont++;
-                                }
-                            break;
-                            default:
-                                System.out.println("Eso no es un servicio!!");
-                            break;
-                        }
-                    }
-                    System.out.println("Has elegido los servicios: "+ serviciosAñadidos);
-                    break;
-                case 3:
-                    while (cont < 3) {
-                        switch (llegirEnter("¿Que servicio quieres?\n1. Desayuno \n2. Gimnasio\n3. Spa\n4. Piscina\n")) {
-                            case 1:
-                                if (serviciosAñadidos.contains(servicios.get(0))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(0));
-                                    serviciosAñadidos.add(servicios.get(0));
-                                    cont++;
-                                }
-                            break;
-                            case 2:
-                                if (serviciosAñadidos.contains(servicios.get(1))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(1));
-                                    serviciosAñadidos.add(servicios.get(1));
-                                    cont++;
-                                }
-                            break;
-                            case 3:
-                                if (serviciosAñadidos.contains(servicios.get(2))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(2));
-                                    serviciosAñadidos.add(servicios.get(2));
-                                    cont++;
-                                }
-                            break;
-                            case 4:
-                                if (serviciosAñadidos.contains(servicios.get(3))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(3));
-                                    serviciosAñadidos.add(servicios.get(3));
-                                    cont++;
-                                }
-                            break;
-                            default:
-                                System.out.println("Eso no es un servicio!!");
-                            break;
-                        }
-                    }
-                    System.out.println("Has elegido los servicios: "+ serviciosAñadidos);
-                    break;
-                /*case 4:
-                    while (cont < 4) {
-                        switch (llegirEnter("¿Que servicio quieres?\n1. Desayuno \n2. Gimnasio\n3. Spa\n4. Piscina\n")) {
-                            case 1:
-                                if (serviciosAñadidos.contains(servicios.get(0))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(0));
-                                    serviciosAñadidos.add(servicios.get(0));
-                                    cont++;
-                                }
-                            break;
-                            case 2:
-                                if (serviciosAñadidos.contains(servicios.get(1))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(1));
-                                    serviciosAñadidos.add(servicios.get(1));
-                                    cont++;
-                                }
-                            break;
-                            case 3:
-                                if (serviciosAñadidos.contains(servicios.get(2))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(2));
-                                    serviciosAñadidos.add(servicios.get(2));
-                                    cont++;
-                                }
-                            break;
-                            case 4:
-                                if (serviciosAñadidos.contains(servicios.get(3))){
-                                    System.out.println("Ese servicio ya esta añadido");
-                                }else{
-                                    System.out.println("Has elegido el servicio "+ servicios.get(3));
-                                    serviciosAñadidos.add(servicios.get(3));
-                                    cont++;
-                                }
-                            break;
-                            default:
-                                System.out.println("Eso no es un servicio!!");
-                            break;
-                        }
-                    }
-                    System.out.println("Has elegido los servicios: "+ serviciosAñadidos);
-                    break;
+                    case "n":
+                        System.out.println("No quieres mas servicios");
+                        seleccion = "n";
+                        break;
                 default:
-                    System.out.println("Has elegido una opcion invalida");
-                    seleccionarServeis();
-                    break;*/
-            } 
+                    System.out.println("Eso no es una opcion");
+                    break;
+            }
+            }
+            
         return serviciosAñadidos;
     }
 
